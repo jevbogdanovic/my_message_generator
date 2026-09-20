@@ -41,3 +41,21 @@ const arrayOfAllData = {
     "says today think about the people and things that genuinely make you happy and bring you peace.",
   ],
 };
+
+const createMessage = () => {
+  const message = [];
+  message.push(
+    arrayOfAllData.signs[randomNumbergenerator(arrayOfAllData.signs.length)],
+  );
+  message.push(
+    arrayOfAllData.daysOfTheWeek[
+      randomNumbergenerator(arrayOfAllData.daysOfTheWeek.length)
+    ],
+  );
+  message.push(
+    arrayOfAllData.MoonInScorpio[
+      randomNumbergenerator(arrayOfAllData.MoonInScorpio.length)
+    ],
+  );
+  return message;
+};
