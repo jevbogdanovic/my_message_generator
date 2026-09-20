@@ -42,20 +42,33 @@ const arrayOfAllData = {
   ],
 };
 
+//Function to create a message
 const createMessage = () => {
   const message = [];
   message.push(
-    arrayOfAllData.signs[randomNumbergenerator(arrayOfAllData.signs.length)],
+    "Your sign is " +
+      arrayOfAllData.signs[randomNumbergenerator(arrayOfAllData.signs.length)],
   );
   message.push(
-    arrayOfAllData.daysOfTheWeek[
-      randomNumbergenerator(arrayOfAllData.daysOfTheWeek.length)
-    ],
+    "Today is " +
+      arrayOfAllData.daysOfTheWeek[
+        randomNumbergenerator(arrayOfAllData.daysOfTheWeek.length)
+      ],
   );
   message.push(
-    arrayOfAllData.MoonInScorpio[
-      randomNumbergenerator(arrayOfAllData.MoonInScorpio.length)
-    ],
+    "Moon in Scorpio " +
+      arrayOfAllData.MoonInScorpio[
+        randomNumbergenerator(arrayOfAllData.MoonInScorpio.length)
+      ],
   );
   return message;
 };
+
+//Function to display the message
+const displayMessage = () => {
+  for (let line of createMessage()) {
+    console.log(line);
+  }
+};
+
+displayMessage();
